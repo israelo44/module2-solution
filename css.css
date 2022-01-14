@@ -1,0 +1,111 @@
+* {box-sizing: border-box;}
+.row::after {content: ""; clear: both; display: table;}
+[class*="col-"] {float: left;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/*---------------- Boxes ------------------- */
+
+body {
+  background-color: white;
+}   
+
+.boxA, .boxB, .boxC {
+  height: 250px;
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  position: relative;
+  margin: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.box2 {
+  height: 50px;
+  border-style: solid;
+  border-color: black;
+  padding-left: 20px;
+  padding-right: 20px; 
+  float: right;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px;
+  position: relative; 
+  top: 0px;
+  right: 0px;
+}
+
+
+h1 {
+  text-align:center;
+  padding: 50px;
+
+}
+
+p {
+  margin-top: 50px;
+  padding: 10px;
+  clear: left;
+  
+}
+
+#Sushi {
+  background-color: blue;
+  color: white;
+}
+
+#Chicken {
+  background-color: red;
+}
+
+#Beef {
+  background-color: green; 
+}
+
+/*---------------- Media Querys ------------------- */
+
+/*---------------- TABLET --------------------*/
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .boxA, .boxB, .boxC {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .tab-6 {
+      width: 50%;  
+  }
+   .tab-12 {
+      width: 100%;
+  }
+}
+
+/*---------------- MOBILE --------------------*/
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%; 
+  }
+ }
+
+@media only screen and (max-width: 768px) {
+  .boxA, .boxB, .boxC {
+    height: 300px; 
+  }
+ }
